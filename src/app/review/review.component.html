@@ -1,0 +1,15 @@
+<h1 *ngIf="reviewList?.length > 0" class="m-5">Reviews:</h1>
+
+<form action="">
+
+  From:<input  class="m-3" type="number" id="from" name="quantity" min="1" max="5">
+  To:<input class="m-3" type="number" id="to" name="quantity" min="1" max="5">
+  <button class="m-3" class="btn btn-primary" type="button" (click)="filterReviews() "> Filter </button>
+</form>
+
+
+<ul *ngIf="filteredReviews?.length > 0"  class=" m-5 list-group">
+  <li    [ngClass]=" 'list-group-item' " *ngFor="let r of filteredReviews">
+    <span  role="button" class="user-select-none" [routerLink]="['/review',r]" > {{r.title}}  -  {{r.rating}} </span>
+  </li>
+</ul>

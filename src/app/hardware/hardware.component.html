@@ -1,0 +1,11 @@
+<h1 *ngIf="hardwareList?.length > 0" class="m-5">Lista hardvera</h1>
+<p *ngIf="hardwareList?.length == 0 " class="m-5">Trenutacno nema hardvera na lageru</p>
+<ul  class=" m-5 list-group">
+  <li [ngClass]=" 'list-group-item' " *ngFor="let hw of hardwareList">
+    <span role="button" class="user-select-none" [routerLink]="['/hardware', hw.code]" > {{hw.name}} </span>
+    <a role="button"  class="user-select-none" (click)="deleteHardware(hw)"  class="btn btn-close"></a>
+  </li>
+</ul>
+
+<app-hardware-insert [hardwareList] = "hardwareList" ></app-hardware-insert>
+

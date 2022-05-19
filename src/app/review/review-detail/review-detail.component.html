@@ -1,0 +1,9 @@
+<div *ngIf="selectedReview" class="card">
+  <div class="card-header">
+    <p>{{selectedReview.title}}</p> for : <span>{{selectedReview.hwCode}}</span>
+  </div>
+  <div class="card-body">
+    <p  class="card-text"> {{selectedReview.content}}   -  {{selectedReview.rating}}</p>
+    <a (click)="goBack()"  class="btn btn-light">Back</a>
+  </div>
+</div>

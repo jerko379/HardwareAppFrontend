@@ -1,0 +1,24 @@
+<div *ngIf="selectedHardware" class="card">
+  <div class="card-header">
+    <p>{{selectedHardware.name}}</p>
+  </div>
+  <div class="card-body">
+    <p  class="card-text">Price : {{selectedHardware.price}} $</p>
+    <a (click)="goBack()"  class="btn btn-light">Back</a>
+  </div>
+</div>
+
+<h1 *ngIf="reviewList?.length > 0" class="m-5">Sve recenzije:</h1>
+<p *ngIf="reviewList?.length == 0 " class="m-5">Za ovaj hardver nema recenzija</p>
+<ul *ngIf="reviewList?.length > 0"  class=" m-5 list-group">
+  <li [ngClass]=" 'list-group-item' " *ngFor="let re of reviewList">
+    <h4>{{re.title}}</h4>
+    <br>
+    <h5>{{re.rating}} / 5</h5>
+    <br>
+    <p>{{re.content}}</p>
+
+
+  </li>
+</ul>
+
