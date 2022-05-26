@@ -5,5 +5,5 @@ export interface Hardware {
   price?:number;
   code?:string;
   type?:string;
-  quantity?:number;
+  stock?:number;
 }

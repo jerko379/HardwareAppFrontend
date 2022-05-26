@@ -1,0 +1,59 @@
+{
+  "language" : {
+    "croatian" : "Croatian",
+    "english"  : "English"
+  },
+  "navbar" : {
+    "logout" : "Logout",
+    "home" : "Home",
+    "hardware" : "Hardware",
+    "reviews" : "Reviews",
+    "user" : "User"
+  },
+  "forbidden" : {
+    "unauthorized" : "You don't have the rights to access this page",
+    "homepage" : "Return to home page"
+  },
+  "hardware" : {
+    "list" : "Hardware list",
+    "emptystock" : "Currently there is none of the hardware on stock"
+  },
+  "login" : {
+    "login" : "Login",
+    "username" : "Username",
+    "password" : "Password",
+    "error" : "There was an error logging in, please check your username and password and try again."
+  },
+  "home" : {
+    "authmessage" : "Please login to access lists of hardware and reviews",
+    "welcomemsg" : "Welcome user",
+    "authlvl" : "Your authorization level is",
+    "hwlist" : "Hardware list" ,
+    "rlist" : "Review list"
+  },
+  "detail" : {
+    "price" : "Price: ",
+    "back" : "Back" ,
+    "allreviews" : "All reviews : ",
+    "noreviews" : "For this hardware there is no reviews"
+  },
+  "insert" : {
+    "insertnew" : "Insert new",
+    "code" : "Code",
+    "name" : "Name",
+    "type" : "Type" ,
+    "other" : "Other",
+    "quantity"  : "Quantity in stock" ,
+    "price" : "Price  ",
+    "insert" : "Insert"
+  },
+  "pagenotfound": {
+    "notfound" : "Page you are looking for is not found" ,
+    "return" : "Return to home page"
+  },
+  "reviews" :
+  {
+    "reviews" : "Reviews"
+  }
+
+}

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HardwareService} from "./hardware.service";
 import {Hardware} from "../models/hardware";
 import {catchError, Observable, tap} from "rxjs";
+import {AuthenticationService} from "../security/authentication.service";
 
 @Component({
   selector: 'app-hardware',
@@ -13,10 +14,13 @@ export class HardwareComponent implements OnInit {
   hardwareList : Hardware[];
   selectedHardware?  : Hardware;
   selectedInsert ?: boolean;
+  isUserAdmin: boolean;
 
-  constructor(private hardwareService : HardwareService) {
-    this.selectedInsert =false;
-
+  constructor(
+    private hardwareService: HardwareService,
+    private authenticationService: AuthenticationService
+  ) {
+    this.isUserAdmin = this.authenticationService.isUserAdmin();
   }
 
    ngOnInit() {

@@ -1,35 +1,42 @@
 <button (click)="insertNew()" class="btn btn-primary mx-5 " type="button" data-bs-toggle="collapse" data-bs-target="#collapseForm" aria-expanded="false" aria-controls="collapseForm">
-  Insert new
+  {{'insert.insertnew' | translate}}
 </button>
 <div class="collapse m-5" id="collapseForm">
   <div class="card card-body">
     <form [formGroup]="insertForm" id="insertForm">
       <div class="mb-3">
-        <label for="sifra" class="form-label">Code:</label>
+        <label for="sifra" class="form-label">  {{'insert.code' | translate}} :
+        </label>
         <input formControlName="code" #code type="text" class="form-control" id="sifra">
       </div>
       <div class="mb-3">
-        <label for="name" class="form-label">Name:</label>
+        <label for="name" class="form-label">  {{'insert.name' | translate}}
+          :</label>
         <input formControlName="name" #name type="text" class="form-control" id="name">
       </div>
-      <label for="type" class="form-label">Type:</label>
+      <label for="type" class="form-label">  {{'insert.type' | translate}}
+        :</label>
       <select formControlName="type" #type class="form-select mb-3" id="type" aria-label="type">
         <option value="CPU">CPU</option>
         <option value="GPU">GPU</option>
         <option value="MBO">MBO</option>
         <option value="RAM">RAM</option>
         <option value="STORAGE">STORAGE</option>
-        <option value="OTHER">Other</option>
+        <option value="OTHER">  {{'insert.other' | translate}}
+        </option>
       </select>
       <div class="mb-3">
-        <label for="quantity" class="form-label">Quantity in stock: </label>
+        <label for="quantity" class="form-label">  {{'insert.quantity' | translate}}
+          : </label>
         <input formControlName="quantity" #quantity type="number" class="form-control" id="quantity">
       </div>
       <div class="mb-3">
-        <label for="price" class="form-label">Price:</label>
+        <label for="price" class="form-label">  {{'insert.price' | translate}}
+          :</label>
         <input formControlName="price" #price type="number" class="form-control" id="price">
       </div>
-      <button type="button" (click)="insertHardware(code.value, name.value, type.value, quantity.value, price.value )"  class="btn btn-success">Insert</button>
+      <button type="button" (click)="insertHardware(code.value, name.value, type.value, quantity.valueAsNumber, price.valueAsNumber )"  class="btn btn-success">  {{'insert.insert' | translate}}
+      </button>
     </form>
   </div>
 </div>

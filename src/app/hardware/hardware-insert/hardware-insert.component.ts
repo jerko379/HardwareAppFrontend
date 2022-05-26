@@ -39,7 +39,7 @@ export class HardwareInsertComponent implements OnInit {
     name = name.trim();
     code = code.trim();
     type = type.trim();
-    this.newHardware = {name: name, price:price, code: code, type:type, quantity :quantity}
+    this.newHardware = {name: name, price:price, code: code, type:type, stock :quantity}
     this.hardwareService.insertHardware( this.newHardware)
       .subscribe((hw) => {
         if(hw != null) {

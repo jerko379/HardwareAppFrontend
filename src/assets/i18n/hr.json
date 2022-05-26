@@ -1,0 +1,59 @@
+{
+  "language" : {
+    "croatian" : "Hrvatski",
+    "english"  : "Engleski"
+  },
+  "navbar" : {
+    "logout" : "Odjava",
+    "home" : "Home",
+    "hardware" : "Hardver",
+    "reviews" : "Recenzije",
+    "user" : "Korisnik"
+  },
+  "forbidden" : {
+    "unauthorized" : "Nemate pravo pristupa traženoj stranici!",
+    "homepage" : "Povratak na pocetnu stranicu"
+  },
+  "hardware" : {
+    "list" : "Lista hardvera",
+    "emptystock" : "Trenutacno nema hardvera na lageru"
+  },
+  "login" : {
+    "login" : "Prijava",
+    "username" : "Korisnicko ime",
+    "password" : "Lozinka",
+    "error" : "Došlo je do pogreške prilikom prijave, provjerite uneseno korisničko ime i lozinku te pokušajte ponovno."
+  },
+  "home" : {
+    "authmessage" : "Za pristup listi hardvera i recenzija molimo se prijavite",
+    "welcomemsg" : "Dobrodošli korisniče",
+    "authlvl" : "Vaša razina autorizacije je ",
+    "hwlist" : "Lista hardvera" ,
+    "rlist" : "Lista recenzija"
+  },
+  "detail" : {
+    "price" : "Cijena: ",
+    "back" : "Natrag" ,
+    "allreviews" : "Sve recenzije : ",
+    "noreviews" : "Za ovaj hardver nema recenzija"
+  },
+  "insert" : {
+    "insertnew" : "Umetni novi hardver",
+    "code" : "Kod",
+    "name" : "Ime",
+    "type" : "Tip" ,
+    "other" : "Ostalo",
+    "quantity"  : "Količina na lageru" ,
+    "price" : "Cijena  ",
+    "insert" : "Umetni"
+  },
+
+  "pagenotfound": {
+    "notfound" : "Tražena stranica nije pronađena" ,
+    "return" : "Povratak na početnu stranicu"
+  },
+  "reviews" :
+  {
+    "reviews" : "Recenzije"
+  }
+}

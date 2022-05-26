@@ -3,6 +3,7 @@ import {Hardware} from "../models/hardware";
 import {Review} from "../models/review";
 import {HardwareService} from "../hardware/hardware.service";
 import {Observable} from "rxjs";
+import {AuthenticationService} from "../security/authentication.service";
 
 @Component({
   selector: 'app-review',
@@ -15,9 +16,13 @@ export class ReviewComponent implements OnInit {
   hardwareList: Hardware[];
   reviewList: Review[];
   filteredReviews : Review[];
+  isUserAdmin: boolean;
 
-  constructor(private hardwareService: HardwareService) {
-
+  constructor(
+    private hardwareService: HardwareService,
+    private authenticationService: AuthenticationService
+  ) {
+    this.isUserAdmin = this.authenticationService.isUserAdmin();
   }
 
   ngOnInit(): void {

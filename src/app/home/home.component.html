@@ -1,1 +1,36 @@
+<div *ngIf="!authenticationService.isUserAuthenticated()" class="row justify-content-center p-5 m-5 border-bottom">
+  <div class="col">
+    <h1 class="display-4 text-center text-muted">{{'home.authmessage' | translate}}</h1>
+  </div>
+</div>
+
+
+<div  *ngIf="!authenticationService.isUserAuthenticated()"  class="row justify-content-center">
+  <div class="col text-center">
+    <a class="btn btn-outline-info" [routerLink]="['login']">
+      {{'login.login' | translate}}
+    </a>
+  </div>
+</div>
+
+<div *ngIf="authenticationService.isUserAuthenticated()" class="row justify-content-center p-5 m-5 border-bottom">
+  <div class="col">
+    <h1 class="display-6   text-center text-info"> {{'home.welcomemsg' | translate}} {{authenticationService.getAuthenticatedUserUsername()}}</h1>
+    <p class="display-8 text-center text-muted">{{'home.authlvl' | translate}}
+      <span *ngIf="authenticationService.isUserAdmin()"> ADMIN </span>
+      <span *ngIf="!authenticationService.isUserAdmin()"> USER </span>
+    </p>
+  </div>
+</div>
+
+<div  *ngIf="authenticationService.isUserAuthenticated()"  class="row justify-content-center">
+  <div  class="col text-center m-5">
+    <a class="btn btn-lg btn-outline-info" [routerLink]="['/hardware']">
+      {{'home.hwlist' | translate}}
+    </a>
+    <a class="btn btn-lg btn-outline-info m-5" [routerLink]="['/review']">
+      {{'home.rlist' | translate}}
+    </a>
+  </div>
+</div>
 

@@ -3,13 +3,13 @@
     <p>{{selectedHardware.name}}</p>
   </div>
   <div class="card-body">
-    <p  class="card-text">Price : {{selectedHardware.price}} $</p>
-    <a (click)="goBack()"  class="btn btn-light">Back</a>
+    <p  class="card-tex()t">{{'detail.price' | translate}}{{selectedHardware.price}} $</p>
+      <a (click)="goBack()"  class="btn btn-light">{{'detail.back' | translate}}</a>
   </div>
 </div>
 
-<h1 *ngIf="reviewList?.length > 0" class="m-5">Sve recenzije:</h1>
-<p *ngIf="reviewList?.length == 0 " class="m-5">Za ovaj hardver nema recenzija</p>
+<h1 *ngIf="reviewList?.length > 0" class="m-5">{{'detail.allreviews' | translate}}</h1>
+<p *ngIf="reviewList?.length == 0 " class="m-5">{{'detail.noreviews' | translate}}</p>
 <ul *ngIf="reviewList?.length > 0"  class=" m-5 list-group">
   <li [ngClass]=" 'list-group-item' " *ngFor="let re of reviewList">
     <h4>{{re.title}}</h4>
